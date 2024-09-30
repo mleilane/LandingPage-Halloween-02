@@ -1,0 +1,258 @@
+/* estiloza globais */
+* {
+  margin: 0; /*remove a margem padrao*/
+  padding: 0; /*remove prenchimento padrao */
+  box-sizing: border-box; /* Inclui padding e borda no cálculo de largura/altura */
+  font-family: "Poppins", sans-serif; /* define a fonte padrao*/
+  transition: 0.3s ease; /* Adiciona uma transição suave a todas as propriedades */
+}
+
+body {
+  background: linear-gradient(136.16deg, #e8cafb 12.91%, #8a87c1 87.68%);
+  width: 100%;
+  min-height: 100vh;
+  padding: 12px 60px;
+  overflow: hidden; /* Oculta a barra de rolagem */
+}
+
+header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav-link {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  color: #303056;
+  text-decoration: none;
+  position: relative;
+}
+
+/* cria o efeito de uma linha em baixo dos links ao passar o mouse */
+.underline:after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  bottom: -3px;
+  left: 0px;
+  position: absolute;
+  background-color: #303056;
+  transition: 0.3s ease;
+}
+.nav-link:hover:after {
+  width: 100%; /* Aumenta a largura ao passar o mouse */
+}
+
+/* estilizando o botão "suporte" */
+.btn-link {
+  padding: 10px 20px; /* Preenchimento do botão */
+  border: 1px solid #303056; /*bordas*/
+  border-radius: 41px; /* Bordas arredondadas */
+}
+
+.btn-link:hover {
+  opacity: 0.7; /* Muda a opacidade ao passar o mouse */
+}
+
+section {
+  display: flex; /* Usa flexbox para o layout da seção */
+  align-items: center; /* Alinha itens verticalmente ao centro */
+  justify-content: center; /* Centraliza os itens */
+}
+
+.container-right {
+  width: 100%; /* largura*/
+  height: 450px; /*altura fixa*/
+  position: relative;
+  margin-right: -450px;
+  padding-left: 55px;
+}
+
+.container-right img {
+  top: 16px;
+  width: 50%;
+  position: absolute; /* Posiciona a imagem absolutamente */
+}
+
+/* cria efeito de marcador */
+
+.container-right-info {
+  position: absolute;
+  top: 27rem; /* Posição superior */
+  padding-right: 10px; /* Preenchimento à direita */
+  border-right: 2px solid #4a0258; /*borda a direita*/
+  display: flex;
+  flex-direction: column; /* Direção das colunas */
+  justify-content: end; /* Alinha itens ao final */
+  height: 50px; /* altura fixa*/
+  margin-left: 5rem; /* Margem à esquerda */
+}
+
+.container-right-info:after {
+  content: ""; /* Cria um pseudo-elemento */
+  width: 12px; /* Largura do círculo */
+  height: 12px; /* Altura do círculo */
+  border-radius: 50%; /* Bordas arredondadas */
+  background-color: #4a0258; /* Cor do círculo */
+  position: absolute; /* Posiciona absolutamente */
+  right: -6px; /* Posição à direita */
+  top: -8px; /* Posição superior */
+}
+
+.container-right-info p:first-child {
+  font-weight: 700;
+  font-size: 19px;
+  line-height: 180%;
+  color: #303056;
+}
+
+.container-right-info p:last-child {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #303056;
+}
+
+.container-left {
+  margin-top: 30px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+h2 {
+  font-weight: 700;
+  font-size: 19px;
+  line-height: 20px;
+  letter-spacing: 0.03em;
+  color: #303056;
+  margin-bottom: 15px;
+}
+
+.container-left-info p:first-child {
+  font-weight: 900;
+  font-size: 50px;
+  line-height: 109%;
+  color: #303056;
+  margin-bottom: 15px;
+}
+
+.container-left-info p:last-child {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 180%;
+  color: #303056;
+  opacity: 0.8; /* Opacidade */
+  margin-bottom: 15px;
+}
+
+.container-actions {
+  display: flex;
+  width: 100%;
+  justify-content: space-around; /* Distribui espaço entre os itens */
+  align-items: center; /* Alinha itens verticalmente ao centro */
+}
+
+.container-actions button {
+  font-style: normal; /* Estilo da fonte */
+  font-weight: 600; /* Peso da fonte */
+  font-size: 15px; /* Tamanho da fonte */
+  line-height: 22px; /* Altura da linha */
+  text-align: center; /* Alinha texto ao centro */
+  color: #303056; /* cor do texto*/
+  background-image: url("./assets/btn-primary.png"); /* Imagem de fundo */
+  background-color: transparent; /* Fundo transparente */
+  border: none; /* Remove borda */
+  padding: 29px; /* Preenchimento interno */
+  cursor: pointer; /* Altera o cursor ao passar o mouse */
+  width: 190px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  background-repeat: no-repeat; /* Não repete a imagem de fundo */
+}
+
+.container-actions button:hover {
+  opacity: 0.8; /* Muda a opacidade ao passar o mouse */
+  color: #ffffff; /* Muda a cor do texto ao passar o mouse */
+}
+
+.container-actions a {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 22px;
+  color: #303056;
+  text-decoration: none;
+}
+
+.container-actions a:hover {
+  opacity: 0.8;
+}
+
+.btn-ghost {
+  font-weight: 700;
+  font-size: 10px;
+  line-height: 22px;
+  color: #303056;
+  display: block;
+  margin: 12px auto;
+  background-color: transparent;
+  border: none;
+  background-image: url("./assets/btn-secondary.png");
+  padding: 34px 43px;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  margin-top: 5rem;
+}
+
+.btn-ghost:hover {
+  color: #ffffff; /* Muda a cor do texto ao passar o mouse */
+}
+
+/*iniciando animaçao */
+@keyframes fadeColor {
+  0% {
+    opacity: 0; /* Início invisível */
+  }
+  50% {
+    opacity: 1; /* Totalmente visível */
+  }
+  100% {
+    opacity: 0; /* Retorna a invisibilidade */
+  }
+}
+
+.container-right img {
+  animation: fadeColor 5s ease-in-out infinite; /* Aplica a animação */
+}
+
+/*efeito de escrita no span */
+@keyframes shadow {
+  0%,
+  100% {
+    text-shadow: 1px 1px 4px #303056;
+  }
+  50% {
+    text-shadow: 3px 3px 8px #303056;
+  }
+}
+
+span {
+  animation: shadow 2s infinite;
+}
+
+/*iniciando a responsividade */
+
+
